@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/icon-font.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>Brain Test | Exciting tours for adventurous people</title>
+  </head>
+
+  <body>
+    <!-- <script>
+      console.log("script starting");
+      var params = new URLSearchParams(window.location.search);
+      console.log(params);
+      first = params.get("first");
+      console.log(first); // Foo Bar
+      // var queryString = decodeURIComponent(window.location.search);
+      // console.log(queryString);
+      // queryString = queryString.substring(1);
+      // var queries = queryString.split("&");
+      // for (var i = 0; i < queries.length; i++) {
+      //   document.write(queries[i] + "<br>");
+      // }
+    </script> -->
+    <main>
+      <div class="communication__container">
+        <div class="communication__header m-b-2">
+          <h1 class="communication__title">Solving Problems</h1>
+          <h2>Instruction:</h2>
+        </div>
+        <div class="communication__body m-b-2">
+          <p class="m-b-2">
+            Select six option on the following that are most important to you
+            when solving problems.
+          </p>
+          <form action="" class="communication__body-form">
+            <input
+              type="checkbox"
+              value="Passionate"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">Passionate</label><br />
+            <input
+              type="checkbox"
+              value="Accurate"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">Accurate</label><br />
+            <input
+              type="checkbox"
+              value="Challenging"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">Challenging</label><br />
+            <input
+              type="checkbox"
+              value="Clear"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">Clear</label><br />
+            <input
+              type="checkbox"
+              value="Forecasting"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">Forecasting</label><br />
+
+            <input
+              type="checkbox"
+              value="options-6"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-6</label><br />
+            <input
+              type="checkbox"
+              value="options-7"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-7</label><br />
+            <input
+              type="checkbox"
+              value="options-8"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-8</label><br />
+            <input
+              type="checkbox"
+              value="options-9"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-9</label><br />
+            <input
+              type="checkbox"
+              value="options-10"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-10</label><br />
+
+            <input
+              type="checkbox"
+              value="options-11"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-11</label><br />
+            <input
+              type="checkbox"
+              value="options-12"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-12</label><br />
+            <input
+              type="checkbox"
+              value="options-13"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-13</label><br />
+            <input
+              type="checkbox"
+              value="options-14"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-14</label><br />
+            <input
+              type="checkbox"
+              value="options-15"
+              name=""
+              id=""
+              class="solvingproblems__input"
+              onclick="getDetailsOfInput()"
+            />
+            <label for="">options-15</label><br />
+          </form>
+        </div>
+
+        <div class="solving-problems__text-box">
+          <a
+            href="energy.html"
+            class="btn btn--white btn--animated"
+            onclick="goToEnergyPage()"
+            >next</a
+          >
+        </div>
+      </div>
+    </main>
+    <script>
+      let solvingProblemsCheckBoxCount;
+      let solvingProblemsCheckBoxValues;
+      // IF CHECKBOX IS CHECKED THEN TAKE THE VALUE AND INCREMENT THE COUNT
+      function getDetailsOfInput() {
+        solvingProblemsCheckBoxCount = 0;
+        solvingProblemsCheckBoxValues = [];
+        const solvingProblemsInputs = document.querySelectorAll(
+          ".solvingproblems__input"
+        );
+        console.log(solvingProblemsInputs);
+        console.log(solvingProblemsInputs.length);
+        for (let solvingProblemsInput of solvingProblemsInputs) {
+          console.log(solvingProblemsInput.value);
+          console.log(solvingProblemsInput.checked);
+          if (solvingProblemsInput.checked) {
+            solvingProblemsCheckBoxCount += 1;
+            solvingProblemsCheckBoxValues.push(solvingProblemsInput.value);
+          }
+        }
+        console.log(solvingProblemsCheckBoxCount);
+        console.log(solvingProblemsCheckBoxValues);
+      }
+
+      // GO TO NEXT PAGE AND GET RESULT IN RESULT PAGE
+      function goToEnergyPage() {
+        let solvingProblemsObjData = {
+          key1: solvingProblemsCheckBoxCount,
+          key2: solvingProblemsCheckBoxValues,
+        };
+        // alert(solvingProblemsObjData);
+        let solvingProblemsArrayData = [solvingProblemsObjData];
+        // alert(solvingProblemsArrayData);
+        localStorage.setItem(
+          "solvingProblemsData",
+          JSON.stringify(solvingProblemsArrayData)
+        );
+        // alert(solvingProblemsData);
+      }
+    </script>
+  </body>
+</html>
