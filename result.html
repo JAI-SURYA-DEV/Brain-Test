@@ -60,23 +60,19 @@
       // console.log(firstData);
       // console.log(secondData);
 
-      var data = localStorage.getItem("object_name");
-      console.log(data);
+      // ------------------ ------------------- ---------------------
+      // COMMUNICATION RESULT DATA
+      let communicationResultData = localStorage.getItem("communicationData");
+      console.log(communicationResultData);
       // localStorage.clear(); //clean the localstorage
-      var value0 = JSON.parse(data);
-      console.log(value0);
-      console.log(value0[0]);
-      var value1 = value0[0].key1;
-      console.log(value1);
-      // alert(value1);
-      var value2 = value0[0].key2;
-      console.log(value2);
-      // var value1 = JSON.parse(data).key1;
-      // var value2 = JSON.parse(data).key2;
+      communicationResultData = JSON.parse(communicationResultData);
+      console.log(communicationResultData);
+      console.log(communicationResultData[0]);
+      let communicationSelectionCount = communicationResultData[0].key1;
+      console.log(communicationSelectionCount);
       const communicationFinalResult = (document.getElementById(
         "communication__finalresult"
-      ).innerHTML = value1);
-      // communicationFinalResult
+      ).innerHTML = communicationSelectionCount);
 
       // ------------------ ------------------- ---------------------
       // SOLVING PROBLEMS RESULT DATA
