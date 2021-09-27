@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/icon-font.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <!-- <script type="text/javascript" src="./scripts/app.js"></script> -->
+    <title>Brain Test | Exciting tours for adventurous people</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="result-container">
+        <div class="result__header m-b-2">
+          <h1 class="result__title">result</h1>
+        </div>
+
+        <div class="result__body">
+          <div class="communication-page flex-width">
+            <h1>communication page</h1>
+            <p>Selections : <span id="communication__finalresult"></span></p>
+          </div>
+
+          <div class="solvingproblems-page flex-width">
+            <h1>Solving Problems Page</h1>
+            <p>Selections : <span id="solvingproblems__finalresult"></span></p>
+          </div>
+
+          <div class="solvingproblems-page flex-width">
+            <h1>Energy Page</h1>
+            <p>Selections : <span id="energy__finalresult"></span></p>
+          </div>
+        </div>
+
+        <div class="result__text-box">
+          <a href="index.html" class="btn btn--white btn--animated"
+            >thnak you</a
+          >
+        </div>
+      </div>
+    </main>
+    <script>
+      // alert("this test");
+      // Get the variable
+      // var myData = localStorage.getItem("objectToPass");
+      // console.log(myData);
+      // // localStorage.removeItem("objectToPass"); // Clear the localStorage
+      // var firstData = myData[0];
+      // var secondData = myData[1];
+      // alert("firstData: " + firstData + "\nsecondData: " + secondData);
+      // console.log(firstData);
+      // console.log(secondData);
+
+      var data = localStorage.getItem("object_name");
+      console.log(data);
+      // localStorage.clear(); //clean the localstorage
+      var value0 = JSON.parse(data);
+      console.log(value0);
+      console.log(value0[0]);
+      var value1 = value0[0].key1;
+      console.log(value1);
+      // alert(value1);
+      var value2 = value0[0].key2;
+      console.log(value2);
+      // var value1 = JSON.parse(data).key1;
+      // var value2 = JSON.parse(data).key2;
+      const communicationFinalResult = (document.getElementById(
+        "communication__finalresult"
+      ).innerHTML = value1);
+      // communicationFinalResult
+
+      // ------------------ ------------------- ---------------------
+      // SOLVING PROBLEMS RESULT DATA
+      let solvingProblemsResultData = localStorage.getItem(
+        "solvingProblemsData"
+      );
+      console.log(solvingProblemsResultData);
+      // localStorage.clear(); //clean the localstorage
+      solvingProblemsResultData = JSON.parse(solvingProblemsResultData);
+      console.log(solvingProblemsResultData);
+      console.log(solvingProblemsResultData[0]);
+      let solvingProblemsSelectionCount = solvingProblemsResultData[0].key1;
+      console.log(solvingProblemsSelectionCount);
+      const solvingProblemsFinalResult = (document.getElementById(
+        "solvingproblems__finalresult"
+      ).innerHTML = solvingProblemsSelectionCount);
+      // ------------------ ------------------- ---------------------
+      // ENERGY RESULT DATA
+      let energyResultData = localStorage.getItem("energyData");
+      console.log(energyResultData);
+      // localStorage.clear(); //clean the localstorage
+      energyResultData = JSON.parse(energyResultData);
+      console.log(energyResultData);
+      console.log(energyResultData[0]);
+      let energySelectionCount = energyResultData[0].key1;
+      console.log(energySelectionCount);
+      const energyFinalResult = (document.getElementById(
+        "energy__finalresult"
+      ).innerHTML = energySelectionCount);
+    </script>
+  </body>
+</html>
